@@ -1,25 +1,19 @@
 body {
     margin: 0;
-    overflow: hidden; /* Hide overflow to prevent scrolling */
+    overflow: hidden;
 }
 
 #book {
     display: flex;
-    perspective: 1000px;
-    height: 100vh;
     transition: transform 1s;
 }
 
 .page {
-    width: 100vw; /* Make each page take up the full viewport width */
+    width: 100vw;
     transform-style: preserve-3d;
     margin: 0 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     backface-visibility: hidden;
-}
-
-.page:nth-child(2n) {
-    transform: rotateY(180deg);
 }
 
 .page .content {
@@ -33,16 +27,15 @@ body {
 
 .profile-container {
     position: relative;
-    overflow: hidden; /* Hide the overflow to ensure the entire image is visible */
+    overflow: hidden;
 }
 
 .profile-photo {
-    width: 100vw; /* Make the image take up 100% of the viewport width */
-    height: 100vh; /* Make the image take up 100% of the viewport height */
-    object-fit: cover; /* Ensure the image covers the entire container */
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 
-/* Container for the journey content */
 .journey-container {
     position: absolute;
     top: 50%;
@@ -51,5 +44,3 @@ body {
     text-align: center;
     color: white;
 }
-
-/* Add more styling as needed */
