@@ -33,20 +33,19 @@ body {
 }
 
 .profile-photo {
-    width: 100%; /* Make the image take up 100% of the container width */
-    height: 100%; /* Make the image take up 100% of the container height */
+    width: 100vw; /* Make the image take up 100% of the viewport width */
+    height: 100vh; /* Make the image take up 100% of the viewport height */
     object-fit: cover; /* Ensure the image covers the entire container */
 }
 
 /* Container for the journey content */
 .journey-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%; /* Ensures the container takes up the full height of the page */
-    padding: 20px; /* Add padding to center the content */
-    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
 }
 
 /* Add more styling as needed */
