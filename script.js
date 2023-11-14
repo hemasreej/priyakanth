@@ -1,5 +1,5 @@
 let currentPage = 1;
-const totalPages = 10;  // Update this with the total number of pages
+const totalPages = 10;
 
 document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', handleKeyPress);
@@ -20,5 +20,17 @@ function nextPage() {
 
 function updateBook() {
     const book = document.getElementById('book');
-    book.style.transform = `translateX(${-100 * (currentPage - 1)}vw)`;
+    const nextPage = document.getElementById(`page${currentPage}`);
+    const currentTransform = getComputedStyle(book).transform;
+    
+    // Ensure smooth transition between pages
+    book.style.transition = 'transform 1s ease-in-out';
+    
+    // Apply the transition to the next page
+    book.style.transform = `translateX(${currentTransform ? parseInt(currentTransform.split(',')[4]) - 100 : 0}vw)`;
+    
+    // Remove transition after it's done to avoid affecting other transformations
+    setTimeout(() => {
+        book.style.transition = 'none';
+    }, 1000);
 }
