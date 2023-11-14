@@ -33,18 +33,20 @@ body {
 }
 
 .profile-photo {
-    width: 75%; /* Make the image take up 75% of the container width */
-    height: auto;
-    max-height: 80vh; /* Set a maximum height if needed to prevent excessive stretching */
+    width: 100vw; /* Make the image take up 100% of the viewport width */
+    height: 100vh; /* Make the image take up 100% of the viewport height */
     object-fit: cover; /* Ensure the image covers the entire container */
 }
-/* Add this to your CSS file */
+
+/* Container for the journey content */
 .journey-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%; /* Ensures the container takes up the full height of the page */
+    padding: 20px; /* Add padding to center the content */
+    box-sizing: border-box;
 }
 
 /* Add more styling as needed */
