@@ -1,17 +1,24 @@
-// Inside script.js file
+let currentPage = 1;
+const totalPages = 10;  // Update this with the total number of pages
 
-const book = document.getElementById('book');
-const pages = document.querySelectorAll('.page');
-let currentPage = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('keydown', handleKeyPress);
+});
 
-book.addEventListener('click', () => {
-    if (currentPage < pages.length - 1) {
+function handleKeyPress(event) {
+    if (event.keyCode === 39) { // Right arrow key
+        nextPage();
+    }
+}
+
+function nextPage() {
+    if (currentPage < totalPages) {
         currentPage++;
         updateBook();
     }
-});
+}
 
 function updateBook() {
-    const angle = -currentPage * 90;
-    book.style.transform = `rotateY(${angle}deg)`;
+    const book = document.getElementById('book');
+    book.style.transform = `translateX(${-100 * (currentPage - 1)}vw)`;
 }
