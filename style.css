@@ -7,15 +7,14 @@ body {
     display: flex;
     perspective: 1000px;
     height: 100vh;
+    transition: transform 1s;
 }
 
 .page {
     width: 100vw; /* Make each page take up the full viewport width */
     transform-style: preserve-3d;
-    transition: transform 1s;
     margin: 0 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    position: absolute;
     backface-visibility: hidden;
 }
 
