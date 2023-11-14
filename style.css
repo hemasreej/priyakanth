@@ -32,6 +32,10 @@ body {
     align-items: center;
 }
 
+.profile-container {
+    position: relative;
+}
+
 .profile-photo {
     width: 100vw; /* Make the image take up 100% of the viewport width */
     height: 100vh; /* Make the image take up 100% of the viewport height */
