@@ -34,6 +34,7 @@ body {
 
 .profile-container {
     position: relative;
+    overflow: hidden; /* Hide the overflow to ensure the entire image is visible */
 }
 
 .profile-photo {
